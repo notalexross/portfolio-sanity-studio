@@ -20,7 +20,9 @@
     "@sanity/vision": "^2.2.6",
     "prop-types": "^15.7",
     "react": "^17.0",
-    "react-dom": "^17.0"
+    "react-dom": "^17.0",
+    "react-icons": "^4.2.0",
+    "sanity-plugin-inline-svg": "^1.0.3"
   },
   "devDependencies": {}
 }
