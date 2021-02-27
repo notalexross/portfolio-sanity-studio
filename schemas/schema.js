@@ -7,13 +7,15 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // We import object and document schemas
 import blockContent from './objects/blockContent'
 import creditedImage from './objects/creditedImage'
+import creditedSvg from './objects/creditedSvg'
+import socialDetails from './objects/socialDetails'
 import svgUploadPreview from 'sanity-plugin-inline-svg'
 
 import project from './documents/project'
 import skill from './documents/skill'
-import author from './documents/author'
 import siteSettings from './documents/siteSettings'
-import portfolio from './documents/portfolio'
+import details from './documents/details'
+import content from './documents/content'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,8 +27,8 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
-    author,
-    portfolio,
+    details,
+    content,
     project,
     skill,
 
@@ -34,6 +36,8 @@ export default createSchema({
     // { type: 'typename' } in other document schemas
     blockContent,
     creditedImage,
+    creditedSvg,
+    socialDetails,
     svgUploadPreview
   ]),
 })

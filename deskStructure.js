@@ -10,7 +10,7 @@ export default () => (
     .title('Content')
     .items([
       S.listItem()
-        .title('Settings')
+        .title('Site Settings')
         .icon(MdSettings)
         .child(
           S.document()
@@ -18,21 +18,21 @@ export default () => (
             .documentId('siteSettings')
         ),
       S.listItem()
-        .title('Author')
+        .title('Details')
         .icon(MdPerson)
         .child(
           S.document()
-            .schemaType('author')
-            .documentId('author')
+            .schemaType('details')
+            .documentId('details')
         ),
       S.listItem()
-        .title('Portfolio')
+        .title('Content')
         .icon(MdDescription)
         .child(
           S.document()
-            .schemaType('portfolio')
-            .documentId('portfolio')
+            .schemaType('content')
+            .documentId('content')
         ),
-      ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'author', 'portfolio'].includes(listItem.getId()))
+      ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'details', 'content', 'author', 'portfolio'].includes(listItem.getId()))
     ])
 )

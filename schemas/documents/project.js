@@ -30,9 +30,6 @@ export default {
         maxLength: 96,
       },
     },
-    // TODO: add requirement that only one of either subdomain or url are supplied.
-    // Possibly via a separate object type?
-    // Looks to be not possible without making an actual component for it (https://github.com/sanity-io/sanity/issues/677).
     {
       name: 'subdomain',
       title: 'Subdomain',
@@ -58,12 +55,27 @@ export default {
       type: 'date',
     },
     {
+      name: 'abstract',
+      title: 'Abstract',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+        },
+      ],
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
     },
     // TODO: restrict dimensions/aspect ratio?
     // TODO: add something like a mainImage object type, which would require a caption and alt text.
+    // There might be a way to setup custom assets that can have alt and credit. (google creditLine)
+    // TODO: consider changing names to imageDesktop and imageMobile so appear next to each other in GraphQL. (NOT for homeImage in content.js though)
     {
       name: 'desktopImage',
       title: 'Desktop Image',

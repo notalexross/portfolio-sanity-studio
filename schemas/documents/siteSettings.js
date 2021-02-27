@@ -3,31 +3,45 @@ export default {
   title: 'Site Settings',
   type: 'document',
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
+  preview: {
+    prepare() {
+      return ({
+        title: 'Site Settings',
+      })
+    },
+  },
   fields: [
     {
       name: 'title',
+      title: 'Site Title',
       type: 'string',
-      title: 'Title'
     },
     {
       name: 'description',
+      title: 'Site Description',
       type: 'text',
-      title: 'Description',
     },
     {
       name: 'canonical',
+      title: 'Main Site URL',
       type: 'url',
-      title: 'Site URL',
       description: 'Canonical link to the site.'
     },
     {
-      name: 'keywords',
+      name: 'domainNames',
+      title: 'Domain names',
+      description: 'Enter all site domain names that contain project subdomains, e.g. rossdaniel.com',
       type: 'array',
-      title: 'Keywords',
+      of: [{type: 'string'}]
+    },
+    {
+      name: 'keywords',
+      title: 'Site Keywords',
+      type: 'array',
       of: [{type: 'string'}],
       options: {
         layout: 'tags'
       }
-    }
+    },
   ]
 }
