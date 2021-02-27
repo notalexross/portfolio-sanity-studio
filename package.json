@@ -27,5 +27,7 @@
     "sanity-plugin-dashboard-widget-netlify": "^1.0.1",
     "sanity-plugin-inline-svg": "^1.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@sanity/cli": "^2.4.0"
+  }
 }
