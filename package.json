@@ -5,7 +5,8 @@
   "author": "Daniel Ross",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build"
+    "build": "sanity build",
+    "postbuild": "copyfiles _redirects dist/"
   },
   "keywords": [
     "sanity"
@@ -28,6 +29,7 @@
     "sanity-plugin-inline-svg": "^1.0.3"
   },
   "devDependencies": {
-    "@sanity/cli": "^2.4.0"
+    "@sanity/cli": "^2.4.0",
+    "copyfiles": "^2.4.1"
   }
 }
