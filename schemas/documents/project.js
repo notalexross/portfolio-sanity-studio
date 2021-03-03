@@ -95,4 +95,20 @@ export default {
       },
     }
   ],
+  orderings: [
+    {
+      title: 'Title',
+      name: 'title',
+      by: [
+        {field: 'title', direction: 'asc'}
+      ]
+    },
+    {
+      title: 'Date published',
+      name: 'publishedAt',
+      by: [
+        {field: 'publishedAt', direction: 'desc'}
+      ]
+    }
+  ]
 }
