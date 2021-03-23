@@ -43,5 +43,14 @@ export default {
         layout: 'tags'
       }
     },
+    {
+      name: 'image',
+      title: 'Site Image',
+      description: 'Site preview image when shared',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
   ]
 }
