@@ -5,10 +5,10 @@ export default {
   // __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   preview: {
     prepare() {
-      return ({
-        title: 'Content',
-      })
-    },
+      return {
+        title: 'Content'
+      }
+    }
   },
   fields: [
     {
@@ -25,16 +25,16 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: []
+        }
+      ]
     },
     {
       name: 'homeImage',
       title: 'Home Background Image',
       type: 'array',
-      of: [{type: 'creditedImage'}],
+      of: [{ type: 'creditedImage' }],
       validation: Rule => Rule.max(1)
     },
     {
@@ -45,9 +45,9 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: []
+        }
       ],
       validation: Rule => Rule.required()
     },
@@ -56,7 +56,7 @@ export default {
       title: 'Featured Projects',
       description: 'Select featured projects, in the order that they should appear.',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'project'}]}],
+      of: [{ type: 'reference', to: [{ type: 'project' }] }],
       validation: Rule => Rule.unique()
     },
     {
@@ -64,8 +64,8 @@ export default {
       title: 'Featured Skills',
       description: 'Select featured skills, in the order that they should appear.',
       type: 'array',
-      of: [{type: 'reference', to: [{type: 'skill'}]}],
+      of: [{ type: 'reference', to: [{ type: 'skill' }] }],
       validation: Rule => Rule.unique()
-    },
+    }
   ]
 }

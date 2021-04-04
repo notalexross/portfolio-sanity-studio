@@ -5,21 +5,21 @@ export default {
   __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   preview: {
     prepare() {
-      return ({
-        title: 'Site Settings',
-      })
-    },
+      return {
+        title: 'Site Settings'
+      }
+    }
   },
   fields: [
     {
       name: 'title',
       title: 'Site Title',
-      type: 'string',
+      type: 'string'
     },
     {
       name: 'description',
       title: 'Site Description',
-      type: 'text',
+      type: 'text'
     },
     {
       name: 'canonical',
@@ -30,15 +30,16 @@ export default {
     {
       name: 'domainNames',
       title: 'Domain names',
-      description: 'Enter all site domain names that contain project subdomains, e.g. rossdaniel.com',
+      description:
+        'Enter all site domain names that contain project subdomains, e.g. rossdaniel.com',
       type: 'array',
-      of: [{type: 'string'}]
+      of: [{ type: 'string' }]
     },
     {
       name: 'keywords',
       title: 'Site Keywords',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
       options: {
         layout: 'tags'
       }
@@ -49,8 +50,8 @@ export default {
       description: 'Site preview image when shared',
       type: 'image',
       options: {
-        hotspot: true,
-      },
-    },
+        hotspot: true
+      }
+    }
   ]
 }

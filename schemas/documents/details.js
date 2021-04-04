@@ -5,18 +5,18 @@ export default {
   // __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   preview: {
     prepare() {
-      return ({
-        title: 'Details',
-      })
-    },
+      return {
+        title: 'Details'
+      }
+    }
   },
   fields: [
     {
       name: 'social',
       title: 'Social Media',
       type: 'array',
-      of: [{type: 'socialDetails'}],
+      of: [{ type: 'socialDetails' }],
       validation: Rule => Rule.unique()
-    },
+    }
   ]
 }

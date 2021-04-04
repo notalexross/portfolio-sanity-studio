@@ -13,7 +13,7 @@ export default {
       name: 'credit',
       title: 'Credit',
       type: 'string',
-      description: 'e.g. SVG courtesy of Font-Awesome: https://fontawesome.com/license',
-    },
-  ],
+      description: 'e.g. SVG courtesy of Font-Awesome: https://fontawesome.com/license'
+    }
+  ]
 }

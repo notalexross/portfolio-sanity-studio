@@ -6,20 +6,21 @@ export default {
     select: {
       title: 'title',
       date: 'publishedAt',
-      media: 'desktopImage',
+      media: 'desktopImage'
     },
     prepare(selection) {
       const { date } = selection
-      return Object.assign({}, selection, {
-        subtitle: date,
-      })
-    },
+      return {
+        ...selection,
+        subtitle: date
+      }
+    }
   },
   fields: [
     {
       name: 'title',
       title: 'Title',
-      type: 'string',
+      type: 'string'
     },
     {
       name: 'slug',
@@ -27,32 +28,32 @@ export default {
       type: 'slug',
       options: {
         source: 'title',
-        maxLength: 96,
-      },
+        maxLength: 96
+      }
     },
     {
       name: 'subdomain',
       title: 'Subdomain',
       description: 'Within portfolio site.',
-      type: 'string',
+      type: 'string'
     },
     {
       name: 'url',
       title: 'URL',
       description: 'URL of project, given it is not at a subdomain of portfolio site.',
-      type: 'url',
+      type: 'url'
     },
     {
       name: 'skills',
       title: 'Skills',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'skill'}}],
+      of: [{ type: 'reference', to: { type: 'skill' } }],
       validation: Rule => Rule.unique()
     },
     {
       name: 'publishedAt',
       title: 'Date published',
-      type: 'date',
+      type: 'date'
     },
     {
       name: 'abstract',
@@ -62,15 +63,15 @@ export default {
         {
           title: 'Block',
           type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: []
+        }
+      ]
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'blockContent'
     },
     // TODO: restrict dimensions/aspect ratio?
     // TODO: add something like a mainImage object type, which would require a caption and alt text.
@@ -82,8 +83,8 @@ export default {
       description: '16:9 view of the project.',
       type: 'image',
       options: {
-        hotspot: true,
-      },
+        hotspot: true
+      }
     },
     {
       name: 'mobileImage',
@@ -91,24 +92,20 @@ export default {
       description: '9:16 view of the project.',
       type: 'image',
       options: {
-        hotspot: true,
-      },
+        hotspot: true
+      }
     }
   ],
   orderings: [
     {
       title: 'Title',
       name: 'title',
-      by: [
-        {field: 'title', direction: 'asc'}
-      ]
+      by: [{ field: 'title', direction: 'asc' }]
     },
     {
       title: 'Date published',
       name: 'publishedAt',
-      by: [
-        {field: 'publishedAt', direction: 'desc'}
-      ]
+      by: [{ field: 'publishedAt', direction: 'desc' }]
     }
   ]
 }

@@ -4,8 +4,8 @@ export default {
   type: 'object',
   preview: {
     select: {
-      title: 'url',
-    },
+      title: 'url'
+    }
   },
   fields: [
     {
@@ -22,5 +22,5 @@ export default {
         scheme: ['http', 'https']
       })
     }
-  ],
+  ]
 }

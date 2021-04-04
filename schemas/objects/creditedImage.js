@@ -8,7 +8,7 @@ export default {
       title: 'Image',
       type: 'image',
       options: {
-        hotspot: true,
+        hotspot: true
       },
       validation: Rule => Rule.required().error('Missing image.')
     },
@@ -16,7 +16,7 @@ export default {
       name: 'credit',
       title: 'Image Credit',
       type: 'string',
-      description: 'e.g. Image courtesy of https://unsplash.com/@traf',
-    },
-  ],
+      description: 'e.g. Image courtesy of https://unsplash.com/@traf'
+    }
+  ]
 }

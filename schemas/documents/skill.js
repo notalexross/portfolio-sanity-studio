@@ -1,4 +1,4 @@
-import { MdLocalOffer } from "react-icons/md"
+import { MdLocalOffer } from 'react-icons/md'
 
 export default {
   name: 'skill',
@@ -6,12 +6,12 @@ export default {
   type: 'document',
   preview: {
     select: {
-      title: 'title',
+      title: 'title'
     },
     prepare(selection) {
       const { title } = selection
       return {
-        title: title,
+        title,
         media: MdLocalOffer
       }
     }
@@ -26,16 +26,16 @@ export default {
     {
       name: 'url',
       title: 'URL',
-      type: 'url',
+      type: 'url'
     },
     // TODO: combine into a new type
     {
       name: 'icon',
       title: 'Icon',
       type: 'array',
-      of: [{type: 'creditedSvg'}],
+      of: [{ type: 'creditedSvg' }],
       validation: Rule => Rule.max(1)
-    },
+    }
     // {
     //   name: 'test',
     //   title: 'test SVG',
@@ -54,5 +54,5 @@ export default {
     //   description: 'e.g. SVG courtesy of Font-Awesome: https://fontawesome.com/license',
     //   type: 'string',
     // }
-  ],
+  ]
 }
