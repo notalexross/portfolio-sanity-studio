@@ -44,6 +44,12 @@ export default {
       type: 'url'
     },
     {
+      name: 'sourceUrl',
+      title: 'Source Code URL',
+      description: 'Public URL of project repository on GitHub or similar platform.',
+      type: 'url'
+    },
+    {
       name: 'skills',
       title: 'Skills',
       type: 'array',
