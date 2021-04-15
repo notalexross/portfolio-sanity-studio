@@ -2,7 +2,7 @@ export default {
   name: 'content',
   title: 'Content',
   type: 'document',
-  // __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
+  __experimental_actions: ['update', /* 'create', 'delete', */ 'publish'],
   preview: {
     prepare() {
       return {
