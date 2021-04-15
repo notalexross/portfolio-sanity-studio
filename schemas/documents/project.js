@@ -79,10 +79,6 @@ export default {
       title: 'Body',
       type: 'blockContent'
     },
-    // TODO: restrict dimensions/aspect ratio?
-    // TODO: add something like a mainImage object type, which would require a caption and alt text.
-    // There might be a way to setup custom assets that can have alt and credit. (google creditLine)
-    // TODO: consider changing names to imageDesktop and imageMobile so appear next to each other in GraphQL. (NOT for homeImage in content.js though)
     {
       name: 'desktopImage',
       title: 'Desktop Image',
