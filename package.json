@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Daniel Ross",
   "scripts": {
-    "start": "sanity start",
+    "start": "env SANITY_ACTIVE_ENV=development sanity start",
     "build": "sanity build",
     "postbuild": "copyfiles _redirects dist/",
     "lint": "eslint ."
